@@ -1,0 +1,12 @@
+<label for="prenom">Entre ton prénom</label>
+<input name="prenom" [(ngModel)]="firstName">
+<button (click)="addFirstName()">Ajouter le prénom à la liste</button> <br>
+
+<p>Voici ta liste de prénoms</p>
+
+
+<ul>
+  <li *ngFor="let item of firstNameList; let index = index">{{item}}
+    <button (click)="deleteFirstName(index)">Delete</button>
+  </li>
+</ul>
